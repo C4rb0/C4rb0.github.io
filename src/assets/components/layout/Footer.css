@@ -1,0 +1,41 @@
+.cyber-footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: linear-gradient(to top, #0a0a0a, transparent);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-socials a {
+    color: var(--cyber-light);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+  
+  .footer-socials a:hover {
+    color: var(--cyber-pink);
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+  
+  .footer-signature {
+    color: var(--cyber-light);
+    font-size: 0.9rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* Effetto hover sul footer */
+  .cyber-footer:hover .footer-signature {
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }

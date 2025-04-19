@@ -1,0 +1,15 @@
+[
+    {
+      "slug": "easy-machine",
+      "title": "HTB: Easy Machine",
+      "date": "2025-04-19",
+      "difficulty": "Easy",
+      "category": "web"
+    },
+    {
+      "slug": "medium-box",
+      "title": "HTB: Medium Box",
+      "date": "2025-04-18", 
+      "difficulty": "Medium"
+    }
+  ]

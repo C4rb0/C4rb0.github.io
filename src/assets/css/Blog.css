@@ -1,0 +1,282 @@
+/* Blog.css */
+.cyber-blog {
+    position: relative;
+    padding: 4rem 2rem;
+    background-color: var(--dark);
+    background-image: 
+      linear-gradient(rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
+      radial-gradient(circle at 25% 25%, rgba(var(--secondary-rgb), 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 75% 75%, rgba(var(--primary-rgb), 0.1) 0%, transparent 25%);
+    background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
+    animation: bg-scroll 20s linear infinite;
+    border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+  }
+  
+  .blog-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cyber-section-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 3rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-glitch {
+    position: relative;
+    animation: text-glitch 5s infinite alternate;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .cyber-post {
+    position: relative;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .cyber-post:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.1);
+  }
+  
+  .post-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--secondary-rgb), 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .cyber-post:hover .post-hover-effect {
+    opacity: 1;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .post-date {
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .post-readtime {
+    color: rgba(var(--primary-rgb), 0.7);
+  }
+  
+  .post-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+    line-height: 1.3;
+    background: linear-gradient(90deg, var(--light), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+  }
+  
+  .cyber-post:hover .post-title {
+    background-position: 100% 0;
+  }
+  
+  .post-excerpt {
+    color: rgba(var(--primary-rgb), 0.8);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .cyber-tag {
+    padding: 0.25rem 0.75rem;
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .cyber-post:hover .cyber-tag {
+    background: rgba(var(--primary-rgb), 0.3);
+  }
+  
+  .cyber-readmore {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyber-readmore::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+  
+  .cyber-readmore:hover::after {
+    width: 100%;
+  }
+  
+  .arrow-icon {
+    width: 18px;
+    height: 18px;
+    stroke: var(--primary);
+    transition: transform 0.3s ease;
+  }
+  
+  .cyber-readmore:hover .arrow-icon {
+    transform: translateX(3px);
+  }
+  
+  .view-all-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cyber-view-all {
+    position: relative;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cyber-view-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(var(--primary-rgb), 0.2), transparent);
+    transition: left 0.7s ease;
+  }
+  
+  .cyber-view-all:hover {
+    background: rgba(var(--primary-rgb), 0.1);
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.3);
+  }
+  
+  .cyber-view-all:hover::before {
+    left: 100%;
+  }
+  
+  .view-all-arrow {
+    width: 20px;
+    height: 1px;
+    background: var(--primary);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .view-all-arrow::before,
+  .view-all-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 1px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+  }
+  
+  .view-all-arrow::before {
+    transform: rotate(45deg) translateY(-2px);
+  }
+  
+  .view-all-arrow::after {
+    transform: rotate(-45deg) translateY(2px);
+  }
+  
+  .cyber-view-all:hover .view-all-arrow {
+    width: 30px;
+  }
+  
+  .cyber-view-all:hover .view-all-arrow::before,
+  .cyber-view-all:hover .view-all-arrow::after {
+    right: -5px;
+  }
+  
+  /* Animations */
+  @keyframes text-glitch {
+    0%, 100% { text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5); }
+    25% { text-shadow: -2px -2px 5px var(--secondary); }
+    50% { text-shadow: 2px 2px 5px var(--primary); }
+    75% { text-shadow: -2px 2px 5px var(--secondary); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cyber-blog {
+      padding: 3rem 1.5rem;
+    }
+    
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
